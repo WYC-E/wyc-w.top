@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>显示路径参数</h1>
+    <script>
+      window.onload = function() {
+        var path = window.location.pathname; // 获取当前页面的路径部分
+        var parts = path.split('?'); // 将路径部分按斜杠分割成数组
+        var content = parts[parts.length - 1]; // 获取数组中最后一个元素作为你要显示的内容
+        console.log(content); // 显示内容
+      };
+    </script>
+  </body>
+</html>
