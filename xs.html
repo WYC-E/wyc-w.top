@@ -1,16 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <h1>显示路径参数</h1>
-    <script>
-      window.onload = function() {
-        var path = window.location.pathname; // 获取当前页面的路径部分
-        var parts = path.split('?'); // 将路径部分按斜杠分割成数组
-        var content = parts[parts.length - 1]; // 获取数组中最后一个元素作为你要显示的内容
-        console.log(content); // 显示内容
-      };
-    </script>
-  </body>
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <style>
+            /* 全局样式 */
+            .global_style{
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>  
+    <body>
+        <div class="global_style">
+            <h1 id="content"></h1>  
+            <script>  
+                window.onload = function() {  
+                var path = window.location.search.substring(1); // 获取?后面的路径部分  
+                document.getElementById("content").innerText = path; // 将内容添加到<p>标签中  
+            };  
+            </script> 
+        </div>
+    </body>  
 </html>
