@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>小游戏</title>
+        <link rel="shortcut icon" href="../footage/1.png" type="image/x-icon">
+        <style>
+            /* 全局样式 */
+            .global_style {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* 顶部栏样式 */
+            .top_bar {
+                background-color: #f5f5f5;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .top_bar a {
+                color: #000000;
+                text-decoration: none;
+                font-weight: bold;
+                position: relative;
+                margin-right: 10px; /* 调整超链接之间的右侧间距 */
+            }
+
+            .top_bar a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background-color: transparent;
+                transition: height 0.3s ease-in-out;
+            }
+
+            .top_bar a:hover::before {
+                height: 1px;
+                background-color: #828282;
+            }
+
+            /* 超链接 */
+            .link {
+            background-color: #f5f5f5;
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+            }
+
+            .link a {
+                color: #000000;
+                text-decoration: none;
+                font-weight: bold;
+                position: relative;
+                margin-right: 10px; /* 调整超链接之间的右侧间距 */
+            }
+
+            .link a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background-color: transparent;
+                transition: height 0.3s ease-in-out;
+            }
+
+            .link a:hover::before {
+                height: 3px;
+                background-color: #828282;
+            }
+        </style>
+    </head>
+    <body bgcolor="#f5f5f5">
+        <header class="top_bar">
+            <nav>
+                <a href="https://eason861en.github.io" target="_blank">首页</a>
+                <a href="https://github.com/Eason861EN/Eason861EN.github.io" target="_blank">网页开源</a>
+                <a href="../历史版本/index.html" target="_blank">历史版本</a>
+                <a href="../bqb.html" target="_blank">表情包</a>
+                <a href="https://www.baidu.com" target="_blank">百度</a>
+            </nav> 
+            <img src="../footage/1.png" alt="这是一个搜索不到的logo" width="70px">
+            <nav>
+                <a href="../我的app/王一澄的app.apk" target="_blank">我的软件</a>
+                <a href="https://www.bitbug.net/" target="_blank">比特虫——ico图标转换工具</a>
+            </nav>
+        </header>
+        <section class="global_style">
+            <h1 style="font-size: 50px;">小游戏</h1>
+        </section>
+        <Ul class="link" style="font-size: 25px;">
+            <a href="./2048军旗版.html">2048军旗版</a>
+            <a href="./3D魔方.html">3D魔方</a>
+            <a href="./地狱闯关.html">地狱闯关</a>
+            <a href="./小飞机.html">小飞机</a>
+            <a href="./恐龙快跑.html">恐龙快跑</a>
+            <a href="./扫雷.html">扫雷</a>
+            <a href="./积木切切乐.html">积木切切乐</a>
+            <a href="./网上冲浪.html">网上冲浪</a>
+        </Ul>
+    </body>
+</html>
