@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>小游戏</title>
+        <link rel="shortcut icon" href=".../index/footage/1.png" type="image/x-icon">
+<style>
+    /* CSS样式表 - 全局样式定义 */
+    .global_style {
+        /* 设置全局元素居中对齐 */
+        text-align: center;
+        /* 自动分配左右外边距以使元素居中 */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* CSS样式表 - 顶部栏样式定义 */
+    .top_bar {
+        /* 设置顶部栏背景颜色 */
+        background-color: #f5f5f5;
+        /* 设置顶部栏内部填充 */
+        padding: 10px;
+        /* 设置顶部栏为弹性布局 */
+        display: flex;
+        /* 设置子元素在主轴方向上均匀分布 */
+        justify-content: space-between;
+    }
+
+    /* CSS样式表 - 顶部栏内的超链接样式定义 */
+    .top_bar a {
+        /* 设置超链接文本颜色 */
+        color: #000000;
+        /* 去除超链接下划线 */
+        text-decoration: none;
+        /* 设置超链接字体加粗 */
+        font-weight: bold;
+        /* 设置超链接相对定位 */
+        position: relative;
+        /* 设置相邻超链接间的右侧间距 */
+        margin-right: 10px;
+    }
+
+    /* CSS样式表 - 为顶部栏内超链接添加伪元素:before，在鼠标悬停时显示下划线效果 */
+    .top_bar a::before {
+        /* 伪元素内容为空字符串 */
+        content: '';
+        /* 设置伪元素绝对定位 */
+        position: absolute;
+        /* 设置伪元素距离底部为零 */
+        bottom: 0;
+        /* 设置伪元素距离左侧为零 */
+        left: 0;
+        /* 设置伪元素宽度为父元素宽度的100% */
+        width: 100%;
+        /* 初始高度为零 */
+        height: 0;
+        /* 设置透明背景色 */
+        background-color: transparent;
+        /* 设置高度变化过渡动画，时间为0.3秒，采用ease-in-out缓动方式 */
+        transition: height 0.3s ease-in-out;
+    }
+
+    /* CSS样式表 - 当鼠标悬停在顶部栏内超链接上时，伪元素:before的高度变为1px，并显示深灰色背景 */
+    .top_bar a:hover::before {
+        height: 1px;
+        background-color: #828282;
+    }
+
+    /* CSS样式表 - 超链接样式定义 */
+    .link {
+        /* 设置超链接背景颜色 */
+        background-color: #f5f5f5;
+        /* 设置超链接内部填充，调整超链接之间的上下间距 */
+        padding: 10px;
+        /* 设置超链接也为弹性布局 */
+        display: flex;
+        /* 同样设置子元素在主轴方向上均匀分布 */
+        justify-content: space-between;
+        /* 设置超链接字体大小为25px */
+        font-size: 25px;
+    }
+
+    /* CSS样式表 - 超链接内的a标签样式定义 */
+    .link a {
+        /* 继承并保持相同的颜色、装饰和字体加粗样式 */
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+        /* 设置超链接为相对定位 */
+        position: relative;
+        /* 同样设置相邻超链接间的右侧间距 */
+        margin-right: 10px;
+    }
+
+    /* CSS样式表 - 为超链接内的a标签添加伪元素:before，在鼠标悬停时显示更宽的下划线效果 */
+    .link a::before {
+        /* 再次设置伪元素内容为空字符串 */
+        content: '';
+        /* 保持伪元素绝对定位 */
+        position: absolute;
+        /* 保持伪元素距离底部为零 */
+        bottom: 0;
+        /* 保持伪元素距离左侧为零 */
+        left: 0;
+        /* 宽度依然为父元素宽度的100% */
+        width: 100%;
+        /* 初始高度依然为零 */
+        height: 0;
+        /* 透明背景色不变 */
+        background-color: transparent;
+        /* 过渡动画时间及方式与之前相同 */
+        transition: height 0.3s ease-in-out;
+    }
+
+    /* CSS样式表 - 当鼠标悬停在超链接内的a标签上时，伪元素:before的高度变为3px，并显示深灰色背景 */
+    .link a:hover::before {
+        height: 3px;
+        background-color: #828282;
+    }
+
+    /* CSS样式表 - 段落p标签样式定义 */
+    p{
+        /* 设置段落字体大小为15px */
+        font-size: 15px;
+    }
+</style>
+    </head>
+    <body bgcolor="#f5f5f5">
+        <header class="top_bar">
+            <!-- 顶部导航栏 -->
+            <nav>
+                <a href="https://eason861en.github.io" target="_blank">首页</a>
+                <a href="https://github.com/Eason861EN/Eason861EN.github.io" target="_blank">网页开源</a>
+                <a href="../历史版本/index.html" target="_blank">历史版本</a>
+                <a href="../bqb.html" target="_blank">表情包</a>
+                <a href="https://www.baidu.com" target="_blank">百度</a>
+            </nav> 
+            <img src="../footage/1.png" alt="这是一个搜索不到的logo" width="70px">
+            <nav>
+                <a href="../我的app/王一澄的app.apk" target="_blank">我的软件</a>
+                <a href="https://www.bitbug.net/" target="_blank">比特虫——ico图标转换工具</a>
+            </nav>
+        </header>
+        <section class="global_style">
+            <!-- 小游戏标题 -->
+            <h1 style="font-size: 50px;">小游戏</h1>
+        </section>
+        <Ul class="link">
+            <!-- 小游戏链接列表1 -->
+            <a href="https://web.wetab.link/games/2048/index.html">2048军旗版</a>
+            <a href="https://web.wetab.link/games/cube/index.html">3D魔方</a>
+            <a href="https://web.wetab.link/games/ori/index.html">地狱闯关</a>
+            <a href="https://web.wetab.link/games/aircraft/index.html">小飞机</a>
+            <a href="https://web.wetab.link/games/dino/index.html">恐龙快跑</a>
+            <a href="https://web.wetab.link/games/minesweeper/index.html">扫雷</a>
+            <a href="https://web.wetab.link/games/cut/index.html">积木切切乐</a>
+            <a href="https://web.wetab.link/games/surf/index.html">网上冲浪</a>
+            <a href="https://classic.minecraft.net/">我的世界网页版</a>
+        </Ul>
+        <Ul class="link">
+            <!-- 小游戏链接列表2 -->
+            <a href="https://widget.codelife.cc/games/flattenFlappybird/">压扁Flappy Bird</a>
+            <a href="http://www.secaibi.com/howbigisspace/">Poki</a>
+            <a href="http://weavesilk.com/">Silk – Interactive Generative Art</a>
+            <a href="https://bruno-simon.com/">3D小车</a>
+            <a href="https://tetris.com/play-tetris">俄罗斯方块</a>
+            <a href="https://nazo.one-story.cn/">Nazo_Game</a>
+            <a href="https://lines.frvr.com/">连连看</a>
+            <a href="http://www.staggeringbeauty.com/">越摇越快乐¹</a>
+        </Ul>
+        <Ul class="link" style="font-size: 25px;">
+            <!-- 小游戏链接列表3 -->
+            <a href="http://www.secaibi.com/howbigisspace/">天空有多高²</a>
+        </Ul>
+        <div class="p" style="position: fixed; bottom: 0; width: 100%; background-color: #f5f5f5; padding: 10px;">
+            <explain class="p">
+                <!-- 游戏说明 -->
+                <p>¹：【包含闪烁的图像】</p>
+                <p>²：【滑动鼠标滚轮】</p>
+            </explain>
+        </div>
+    </body>
+</html>
