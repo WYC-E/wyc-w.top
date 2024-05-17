@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <title>好看不？？？</title>
+    <link rel="shortcut icon" href="../index/footage/1.png" type="image/x-icon">
+    <style>
+      /* 初始背景颜色 */
+      body {
+        background-color: red;
+        background-color: orange;
+        background-color: yellow;
+        background-color: green;
+        background-color: cyan; 
+        background-color: blue; 
+        background-color: purple;
+      }
+    </style>
+    <script>
+      // 页面加载完成后执行
+      window.onload = function() {
+        // 获取body元素
+        var body = document.getElementsByTagName("body")[0];
+        
+        // 定义颜色数组
+        var colors = ["red","orange", "yellow","green","cyan", "blue", "purple"];
+        
+        // 设置初始颜色索引
+        var index = 0;
+        
+        // 定时器，每0.01秒切换一次颜色
+        setInterval(function() {
+          // 切换颜色
+          body.style.backgroundColor = colors[index];
+          
+          // 增加索引
+          index++;
+          
+          // 如果索引超出数组长度，重置为0
+          if (index >= colors.length) {
+            index = 0;
+          }
+        }, 10); // 每0.01秒切换一次颜色
+      };
+    </script>
+  </head>
+  <body>
+    <h1>好看不？？？</h1>
+  </body>
+</html>
