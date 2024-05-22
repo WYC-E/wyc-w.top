@@ -18,8 +18,9 @@
             <script>  
                 window.onload = function() {  
                 var path = window.location.search.substring(1); // 获取?后面的路径部分  
-                document.getElementById("title").innerText = path; // 设置标题为?后面的内容  
-                document.getElementById("content").innerText = path; // 将内容添加到<h1>标签中  
+                var path1 = decodeURIComponent(path)
+                document.getElementById("title").innerText = path1; // 设置标题为?后面的内容  
+                document.getElementById("content").innerText = path1; // 将内容添加到<h1>标签中  
             };  
             </script> 
         </div>
