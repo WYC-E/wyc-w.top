@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>坐和放宽</title>
+        <link rel="stylesheet" href="index.css">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            video{
+                position: fixed;
+                right: 0px;
+                bottom: 0px;
+                min-width: 100%;
+                min-height: 100%;
+                height: auto;
+                width: auto;
+                z-index: -11;
+            }
+            source{
+                min-width: 100%;
+                min-height: 100%;
+                height: auto;
+                width: auto;
+            }
+            .global_style {
+                text-align: center;
+                margin: auto;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            .glass:hover{
+                transition: 1s;
+                backdrop-filter: blur(15px);
+            }
+            .glass:not(:hover){
+                transition:0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <video id="v1" autoplay loop muted>
+            <source id="src1" src="video/video0.mp4" type="video/mp4"/>
+        </video>
+        <br>
+        <br>
+        <br>
+        <br>
+        <clock class="global_style" style="color: white;">
+            <h1 style="font-size: 75px;">
+                <div id="clock">--:--:--</div>
+            </h1>
+            <div id="date" style="font-size: 30px;">----</div>
+            <br>
+            <div class="glass">
+                <div id="ww_7c108cf4f2039" v='1.3' loc='auto' a='{"t":"horizontal","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"rgba(255,255,255,1)","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/zh/" id="ww_7c108cf4f2039_u" target="_blank">天气插件</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_7c108cf4f2039"></script>
+            </div>
+            <div class="btn-animate btn-animate__overlap-horizontal" id="huanwallpaper">
+                <span>换壁纸</span>
+            </div>            
+        </clock>  
+        <script>
+            // 定义壁纸文件名数组
+            const wallpapers = ['0', '1', '2'];
+
+            // 获取视频元素
+            const videoElement = document.getElementById('v1');
+            // 获取源元素
+            const sourceElement = document.getElementById('src1');
+
+            
+            // 初始化当前壁纸索引
+            let currentWallpaperIndex = 0;
+
+            // 获取 loader 元素
+            const loaderElement = document.querySelector('.loader-1');
+
+            // 当点击按钮时触发的事件
+            document.getElementById('huanwallpaper').addEventListener('click', () => {
+                // 计算下一个壁纸索引
+                currentWallpaperIndex = (currentWallpaperIndex + 1) % wallpapers.length;
+                // 更改源文件
+                sourceElement.src = `video/video${wallpapers[currentWallpaperIndex]}.mp4`;
+                // 重新加载视频
+                videoElement.load();
+            });
+
+            function updateClock() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                const currentYear = now.getFullYear();
+                const currentMonth = (now.getMonth() + 1).toString().padStart(2, '0');
+                const currentDateOfMonth = now.getDate().toString().padStart(2, '0');
+                document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+                document.getElementById('date').textContent = `${currentYear}年${currentMonth}月${currentDateOfMonth}日`;
+            }
+
+            // 每秒更新一次时间
+            setInterval(updateClock, 1000);
+        </script>
+    </body>
+</html>
