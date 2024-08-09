@@ -2,6 +2,7 @@
 body {
     /* 背景颜色 */
     background: fixed url("index/footage/backgroundimg.jpg");
+    background-attachment: fixed;
 }
 
 /* -----------------------------------------------*/
