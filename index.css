@@ -152,14 +152,10 @@ form .search {
     color: #00000000;
 }
 
-.test{
+.bottomtext{
     position: absolute;
     width: 100%;
     height: 100%;
-    font-weight: bold;
-    font-size: 30px;
-    color: #ffffff;
-    text-shadow: 3px 3px 3px #000000;
     backdrop-filter: blur(20px);
     bottom: -100%;
     left: 0%;
@@ -168,3 +164,18 @@ form .search {
 
 /* 话说，我写这么多注释，是给别人借鉴的？我有病吧！源代码放在GitHub上，大家可以免费使用哦 */
 /* “源代码放在GitHub上，大家可以免费使用哦”这段话是AI生成的可不是我自己说的qwq */
+
+#markdownContent {
+    padding: 10px;
+    max-width: 100%; /* 内容宽度不超过页面宽度 */
+    box-sizing: border-box; /* 边框计算在宽度内 */
+}
+/* 其他样式调整，例如字体大小、段落间距等 */
+p, li {
+    font-size: 14px; /* 减小字体大小 */
+    line-height: 1.4; /* 行高 */
+}
+img {
+    max-width: 100%; /* 图片宽度不超过容器宽度 */
+    height: auto; /* 高度自适应 */
+}
