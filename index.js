@@ -23,8 +23,8 @@ document.getElementById('music').src = `//music.163.com/outchain/player?type=2&i
                 document.getElementById(elementId).innerHTML = htmlContent;
             })
             .catch(error => {
-                console.error('Error loading the Markdown file:', error);
-                document.getElementById(elementId).innerText = 'Failed to load Markdown content.';
+                console.error('加载Markdown文件时出错：', error);
+                document.getElementById(elementId).innerText = '加载Markdown内容失败！';
             });
     }
 
