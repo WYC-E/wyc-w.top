@@ -1,5 +1,5 @@
 /* CSS样式表 - 全局样式定义 */
-.global_style {
+body{
     /* 设置全局元素居中对齐 */
     text-align: center;
     /* 自动分配左右外边距以使元素居中 */
