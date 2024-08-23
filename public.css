@@ -1,0 +1,60 @@
+/* CSS样式表 - 全局样式定义 */
+.global_style {
+    /* 设置全局元素居中对齐 */
+    text-align: center;
+    /* 自动分配左右外边距以使元素居中 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CSS样式表 - 顶部栏样式定义 */
+.top_bar {
+    /* 设置顶部栏背景颜色 */
+    background-color: #f5f5f5;
+    /* 设置顶部栏内部填充 */
+    padding: 10px;
+    /* 设置顶部栏为弹性布局 */
+    display: flex;
+    /* 设置子元素在主轴方向上均匀分布 */
+    justify-content: space-between;
+}
+
+/* CSS样式表 - 顶部栏内的超链接样式定义 */
+.top_bar a {
+    /* 设置超链接文本颜色 */
+    color: #000000;
+    /* 去除超链接下划线 */
+    text-decoration: none;
+    /* 设置超链接字体加粗 */
+    font-weight: bold;
+    /* 设置超链接相对定位 */
+    position: relative;
+    /* 设置相邻超链接间的右侧间距 */
+    margin-right: 10px;
+}
+
+/* CSS样式表 - 为顶部栏内超链接添加伪元素:before，在鼠标悬停时显示下划线效果 */
+.top_bar a::before {
+    /* 伪元素内容为空字符串 */
+    content: '';
+    /* 设置伪元素绝对定位 */
+    position: absolute;
+    /* 设置伪元素距离底部为零 */
+    bottom: 0;
+    /* 设置伪元素距离左侧为零 */
+    left: 0;
+    /* 设置伪元素宽度为父元素宽度的100% */
+    width: 100%;
+    /* 初始高度为零 */
+    height: 0;
+    /* 设置透明背景色 */
+    background-color: transparent;
+    /* 设置高度变化过渡动画，时间为0.3秒，采用ease-in-out缓动方式 */
+    transition: height 0.3s ease-in-out;
+}
+
+/* CSS样式表 - 当鼠标悬停在顶部栏内超链接上时，伪元素:before的高度变为1px，并显示深灰色背景 */
+.top_bar a:hover::before {
+    height: 1px;
+    background-color: #828282;
+}
