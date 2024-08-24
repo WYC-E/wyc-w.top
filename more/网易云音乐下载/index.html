@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function submitForm() {
+                var input = document.getElementsByName('fname')[0].value;
+                window.location.href = 'http://music.163.com/song/media/outer/url?id=' + input + '.mp3';
+            }
+
+            function smusic() {
+                var input = document.getElementsByName('fname1')[0].value;
+                window.location.href = 'https://music.163.com/#/search/m/?s=' + input;
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="submitForm(); return false;">
+            输入音乐id: <input type="text" name="fname"><br>
+            <input type="submit" value="下载">
+        </form>
+        <form onsubmit="smusic(); return false;">
+            搜索音乐: <input type="text" name="fname1"><br>
+            <input type="submit" value="搜索">
+        </form>
+    </body>
+</html>
