@@ -30,3 +30,12 @@ document.getElementById('music').src = `//music.163.com/outchain/player?type=2&i
 
     // 调用函数，加载并显示Markdown内容
     loadMarkdown('https://raw.githubusercontent.com/WYC-E/WYC-E/main/README.md', 'markdownContent');
+
+    window.onload = function() {  
+        var path = window.location.search.replace('?img?', '');
+        if (path === '') {
+            document.body.style.background.url = 'index/footage/backgroundimg.jpg';
+        } else {
+            document.body.style.background.url = path;
+        }
+    };
