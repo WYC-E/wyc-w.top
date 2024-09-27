@@ -50,3 +50,16 @@ window.onload = function() {
         document.body.style.background.url = path;
     }
 };
+
+
+function isMobile() {
+    const userAgentInfo = navigator.userAgent;
+    const mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+     const mobileFlag = mobileAgents.some((mobileAgent) => {
+        return userAgentInfo.indexOf(mobileAgent) > 0;
+    });
+
+    return mobileFlag;
+}
+
+console.log(isMobile() ? '移动端' : 'PC端');
