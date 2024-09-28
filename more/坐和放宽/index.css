@@ -1,0 +1,59 @@
+.btn-animate {
+    position: absolute;
+    top: 10px;
+    right:  10px;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #027efb;
+    color: #fff;
+    text-align: center;
+  }
+  
+   .btn-animate__overlap-horizontal {
+    z-index: 1;
+  
+    &::after {
+      left: auto;
+      right: 0;
+    }
+  
+    &::before, &::after, & > span::before, & > span::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: rgba(144, 207, 91, 0.25);
+      transition: 0.4s;
+      z-index: -1;
+    }
+  
+    & > span::before, & > span::after {
+      transition-delay: 0.4s;
+    }
+  
+    & > span::before {
+      left: auto;
+      right: 0;
+    }
+  
+    &:hover {
+      &::before, &::after, & > span::before, & > span::after {
+        width: 100%;
+      }
+    }
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

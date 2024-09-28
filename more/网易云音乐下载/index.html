@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>网易云下载音乐</title>
+        <script>
+            function extractIdRegex(str) {
+                const regex = /(\?id=)([^&]+)/;
+                const match = str.match(regex);
+                if (match) {
+                    return match[2]; // 返回匹配的部分
+                }
+                return null; // 没有匹配到则返回 null
+            }
+
+            function submitForm() {
+                var input = document.getElementsByName('fname')[0].value;
+                console.log(extractIdRegex(input));
+                window.open('http://music.163.com/song/media/outer/url?id=' + extractIdRegex(input) + '.mp3');
+            }
+
+            function smusic() {
+                var input = document.getElementsByName('fname1')[0].value;
+                window.open('https://music.163.com/#/search/m/?s=' + input);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>网易云下载音乐</h1>
+        <hr>
+        <h2>如何下载音乐？</h2>
+        <hr>
+        <form onsubmit="smusic(); return false;">
+            <h3>第一步</h3>
+            在下方↓框中输入你想下载的音乐，并搜索。
+            <br>
+            <input type="text" name="fname1">
+            <input type="submit" value="搜索">
+        </form>
+        <hr>
+        <h3>第二步</h3>
+        在搜索出来的音乐中，找到你喜欢的音乐，单击打开，复制打开后的地址。
+        <hr>
+        <form onsubmit="submitForm(); return false;">
+            <h3>第三步</h3>
+            在下方↓输入复制后的地址，并点击下载。
+            <input type="text" name="fname">
+            <input type="submit" value="下载">
+        </form>
+    </body>
+</html>
