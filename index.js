@@ -9,7 +9,7 @@ function updateClock() {
 // 每秒更新一次时间
 setInterval(updateClock, 1000);
 
-const musicid = '2124731026';
+const musicid = '2624184715';
 document.getElementById('music').src = `//music.163.com/outchain/player?type=2&id=${musicid}&auto=1&height=66`;
 
 
