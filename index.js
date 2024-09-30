@@ -35,6 +35,7 @@ document.getElementById('markdown!').style.display = 'none';
 document.getElementById('inputmarkdown').addEventListener('click', () => {
     // 调用函数，加载并显示Markdown内容
     loadMarkdown('https://raw.githubusercontent.com/WYC-E/WYC-E/main/README.md', 'markdownContent');
+    loadMarkdown('./README.md', 'markdownContent_web');
     document.getElementById('inputmarkdown').style.display = 'none';
     document.getElementById('markdown!').style.display = 'block';
 });
