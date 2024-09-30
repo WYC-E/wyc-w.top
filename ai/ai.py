@@ -17,3 +17,12 @@ inputs = [
 ];
 output = run("@cf/meta/llama-3-8b-instruct", inputs)
 print(output)
+
+def get_answer(question):
+    inputs = [
+        { "role": "system", "content": "你是一个AI助手，名字叫OrangeAI，你的语言是中文。" },
+        { "role": "user", "content": question}
+    ];
+    
+abc = run("@cf/meta/llama-3-8b-instruct", get_answer("我们能玩游戏吗？"))
+print(abc)
