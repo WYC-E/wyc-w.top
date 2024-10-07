@@ -188,20 +188,5 @@ img {
     height: auto; /* 高度自适应 */
 }
 
-.toptext{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(20px);
-    top: -100%;
-    left: 0%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    color: #ffffff;
-    text-shadow: 3px 3px 3px #000000;
-}
-
-
 /* 话说，我写这么多注释，是给别人借鉴的？我有病吧！源代码放在GitHub上，大家可以免费使用哦 */
 /* “源代码放在GitHub上，大家可以免费使用哦”这段话是AI生成的可不是我自己说的qwq */
