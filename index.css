@@ -1,8 +1,3 @@
-/* 背景 */
-/* body {
-    background: fixed url("index/footage/backgroundimg.jpg");
-} */
-
 body:before {
     content: ' ';
     position: fixed;
@@ -83,10 +78,6 @@ body:before {
     background-color: #999999;
 }
 
-
-
-
-/* 音乐播放器样式 */
 .muisc {
     /* 固定定位 */
     position: fixed;
@@ -94,13 +85,15 @@ body:before {
     bottom: 0px;
 }
 
-/* 时钟样式 */
 .right-text {
-    /* 绝对定位 */
     position: absolute;
-    top: 18%;
-    right: 25%;
+    height: auto;
+    width: auto;
+    top: 15%;
+    right: 20%;
     backdrop-filter: blur(20px);
+    border-style:dashed;
+    text-align: center;
 }
 
 .clock {
@@ -108,6 +101,11 @@ body:before {
     font-size: 50px;
     color: white;
     text-shadow: 10px 10px 15px #000000;
+}
+
+.glass{
+    text-shadow: 5px 5px 10px #000000;
+    font-weight: bold;
 }
 
 .（其实:hover{
@@ -144,12 +142,7 @@ img {
     height: auto; /* 高度自适应 */
 }
 
-.glass{
-    position: absolute;
-    text-shadow: 5px 5px 10px #000000;
-    right: -50%;
-    font-weight: bold;
-}
+
 
 
 /* 话说，我写这么多注释，是给别人借鉴的？我有病吧！源代码放在GitHub上，大家可以免费使用哦 */
