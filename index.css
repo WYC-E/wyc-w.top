@@ -11,7 +11,7 @@ body:before {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("index/footage/backgroundimg.jpg") center 0 no-repeat;
+    background: url("index/footage/backgroundimg1.webp") center 0 no-repeat;
     background-size: cover;
   }
   
@@ -28,12 +28,8 @@ body:before {
     }
 /* -----------------------------------------------*/
 
-/* 全局样式 */
 .global_style {
-    /* 文本居中 */
-    text-align: center;
-    /* 自动居中 */
-    margin: auto;
+    margin-left: 10%;
 }
 
 /* 顶部栏样式 */
@@ -87,49 +83,8 @@ body:before {
     background-color: #999999;
 }
 
-/* 搜索栏样式 */
-form {
-    /* 文本居中 */
-    text-align: center;
-}
 
-form .text {
-    /* 行内块元素 */
-    display: inline-block;
-    /* 无边框 */
-    border: 0;
-    /* 宽度 */
-    width: 260px;
-    /* 高度 */
-    height: 35px;
-    /* 字体大小 */
-    font-size: 14px;
-    /* 无轮廓 */
-    outline: none;
-    /* 边框样式 */
-    border: 2px solid #015baf;
-    background-color: rgb(0, 0, 0, 0);
-    backdrop-filter: blur(15px);
-}
 
-form .search {
-    /* 宽度 */
-    width: 90px;
-    /* 高度 */
-    height: 40px;
-    /* 边框样式 */
-    border: 2px solid #015baf;
-    /* 无轮廓 */
-    outline: none;
-    /* 鼠标指针样式 */
-    cursor: pointer;
-    /* 文本居中 */
-    text-align: center;
-    /* 背景颜色 */
-    background-color: #ffffff00;
-    /* 文字颜色 */
-    color: #888585;
-}
 
 /* 音乐播放器样式 */
 .muisc {
@@ -140,24 +95,25 @@ form .search {
 }
 
 /* 时钟样式 */
-.clock {
+.right-text {
     /* 绝对定位 */
-    position: fixed;
-    /* 底部边距 */
-    bottom: 20px;
-    /* 右侧边距 */
-    right: 20px;
-    /* 字体加粗 */
+    position: absolute;
+    top: 18%;
+    right: 25%;
+    backdrop-filter: blur(20px);
+}
+
+.clock {
     font-weight: bold;
-    /* 字体大小 */
-    font-size: 30px;
-    color: #ffffff;
-    text-shadow: 3px 3px 3px #000000;
+    font-size: 50px;
+    color: white;
+    text-shadow: 10px 10px 15px #000000;
 }
 
 .（其实:hover{
     transition: 1s;
     color:#000000;
+    text-shadow: 5px 5px 10px #000000;
 }
 .（其实:not(:hover){
     transition: 2s;
@@ -187,6 +143,14 @@ img {
     max-width: 100%; /* 图片宽度不超过容器宽度 */
     height: auto; /* 高度自适应 */
 }
+
+.glass{
+    position: absolute;
+    text-shadow: 5px 5px 10px #000000;
+    right: -50%;
+    font-weight: bold;
+}
+
 
 /* 话说，我写这么多注释，是给别人借鉴的？我有病吧！源代码放在GitHub上，大家可以免费使用哦 */
 /* “源代码放在GitHub上，大家可以免费使用哦”这段话是AI生成的可不是我自己说的qwq */
