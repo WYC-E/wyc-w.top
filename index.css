@@ -92,7 +92,6 @@ body:before {
     top: 15%;
     right: 20%;
     backdrop-filter: blur(20px);
-    border-style:dashed;
     text-align: center;
 }
 
