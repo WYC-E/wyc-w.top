@@ -143,7 +143,23 @@ img {
     height: auto; /* 高度自适应 */
 }
 
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
+.abcd {
+    position: absolute;
+    top: -50px;
+    animation: moveUpDown 2s infinite;
+}
 
 
 /* 话说，我写这么多注释，是给别人借鉴的？我有病吧！源代码放在GitHub上，大家可以免费使用哦 */
