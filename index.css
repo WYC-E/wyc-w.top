@@ -85,7 +85,6 @@ body:before {
 .actually:hover {
     transition: 1s;
     color: #000000;
-    text-shadow: 5px 5px 10px #000000;
 }
 
 .actually:not(:hover) {
