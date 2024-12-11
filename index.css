@@ -8,77 +8,52 @@ body:before {
     left: 0;
     background: url("index/footage/backgroundimg1.png") center 0 no-repeat;
     background-size: cover;
-  }
-  
+}
 
-/* -----------------------------------------------*/
-/* 隐藏滚动条（虽然没什么用，但还是做了） */
-    .body {
-        -ms-overflow-style: none;  /* IE 和 Edge */
-        scrollbar-width: none;  /* Firefox */
-    }
-    /* 隐藏 Chrome、Safari 和 Opera 的滚动条 */
-    .body::-webkit-scrollbar {
-        display: none;
-    }
-/* -----------------------------------------------*/
+/* 隐藏滚动条 */
+.body {
+    -ms-overflow-style: none;  /* IE 和 Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.body::-webkit-scrollbar {
+    display: none;
+}
 
 .global_style {
     margin-left: 10%;
 }
 
-/* 顶部栏样式 */
 .top_bar {
-    /* 内边距 */
     padding: 10px;
-    /* 显示为弹性容器 */
     display: flex;
-    /* 内容两端对齐 */
     justify-content: space-between;
 }
 
 .top_bar a {
-    /* 文本颜色 */
     color: #000000;
-    /* 移除下划线 */
     text-decoration: none;
-    /* 字体加粗 */
     font-weight: bold;
-    /* 相对于父元素定位 */
     position: relative;
-    /* 右侧间距 */
     margin-right: 10px;
 }
 
-/* 顶部栏超链接伪元素样式 */
 .top_bar a::before {
-    /* 创建不可见内容 */
     content: '';
-    /* 绝对定位 */
     position: absolute;
-    /* 底部定位 */
     bottom: 0;
-    /* 左侧定位 */
     left: 0;
-    /* 宽度100% */
     width: 100%;
-    /* 高度初始为0 */
     height: 0;
-    /* 透明背景色 */
     background-color: transparent;
-    /* 高度变化过渡效果 */
     transition: height 0.3s ease-in-out;
 }
 
-/* 顶部栏超链接悬停状态伪元素样式 */
 .top_bar a:hover::before {
-    /* 高度变为1像素 */
     height: 1px;
-    /* 背景颜色 */
     background-color: #999999;
 }
 
-.muisc {
+.actually {
     text-shadow: 5px 5px 10px #000000;
     font-weight: bold;
     margin: auto;
@@ -87,8 +62,6 @@ body:before {
 .right-text {
     color: white;
     position: absolute;
-    height: auto;
-    width: auto;
     top: 14%;
     right: 20%;
     backdrop-filter: blur(20px);
@@ -104,22 +77,23 @@ body:before {
     text-shadow: 10px 10px 15px #000000;
 }
 
-.glass{
+.glass {
     text-shadow: 5px 5px 10px #000000;
     font-weight: bold;
 }
 
-.（其实:hover{
+.actually:hover {
     transition: 1s;
-    color:#000000;
+    color: #000000;
     text-shadow: 5px 5px 10px #000000;
 }
-.（其实:not(:hover){
+
+.actually:not(:hover) {
     transition: 2s;
-    color: #00000000;
+    color: rgba(0, 0, 0, 0);
 }
 
-.bottomtext{
+.bottomtext {
     position: absolute;
     width: 100%;
     height: 200%;
@@ -128,39 +102,34 @@ body:before {
     left: 0%;
     text-align: center;
 }
+
 #markdownContent {
     padding: 10px;
-    max-width: 100%; /* 内容宽度不超过页面宽度 */
-    box-sizing: border-box; /* 边框计算在宽度内 */
+    max-width: 100%;
+    box-sizing: border-box;
 }
-/* 其他样式调整，例如字体大小、段落间距等 */
+
 p, li {
-    font-size: 14px; /* 减小字体大小 */
-    line-height: 1.4; /* 行高 */
+    font-size: 14px;
+    line-height: 1.4;
 }
+
 img {
-    max-width: 100%; /* 图片宽度不超过容器宽度 */
-    height: auto; /* 高度自适应 */
+    max-width: 100%;
+    height: auto;
 }
 
 @keyframes moveUpDown {
-    0% {
-      transform: translateY(0);
+    0%, 100% {
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-50px);
+        transform: translateY(-50px);
     }
-    100% {
-      transform: translateY(0);
-    }
-  }
+}
 
 .abcd {
     position: absolute;
     top: -50px;
     animation: moveUpDown 2s infinite;
 }
-
-
-/* 话说，我写这么多注释，是给别人借鉴的？我有病吧！源代码放在GitHub上，大家可以免费使用哦 */
-/* “源代码放在GitHub上，大家可以免费使用哦”这段话是AI生成的可不是我自己说的qwq */
