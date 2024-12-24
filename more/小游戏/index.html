@@ -95,8 +95,36 @@
         background-color: #00000027;
     }
     
-    p{
+    .link button {
+        color: #000000;
+        font-weight: bold;
+        position: relative;
+        margin-right: 10px;
+        outline: dashed #00000027;
+        font-size: larger;
+        text-decoration: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 28px;
+    }
+
+    .link button:hover {
+        transition-duration: 0.3s;
+        background-color: #00000027;
+    }
+
+    .p-{
         font-size: 15px;
+        position: fixed;
+        bottom: 0; 
+        width: 100%; 
+        background-color: #ffffff00; 
+        padding: 10px;
     }
 </style>
     </head>
@@ -151,13 +179,22 @@
             <Ul class="link" >
                 <a href="https://www.geo-fs.com/geofs.php">飞行模拟器</a>
                 <a href="https://florr.io/">florr</a>
+                <a href="https://www.yikm.net/">小霸王</a>
+                <button class="link" type="button" id="js13kgames_button"><input type="number" id="js13kgames" onclick="event.stopPropagation();">年的js13kgames³</button>
             </Ul>
         </div>
-        <div class="p" style="position: fixed; bottom: 0; width: 100%; background-color: #f5f5f5; padding: 10px;">
-            <explain class="p">
+        <div style="height: 107px;"></div>
+        <div class="p-">
+            <explain class="p-">
                 <p>¹：【包含闪烁的图像】</p>
                 <p>²：【滑动鼠标滚轮】</p>
+                <p>³：【输入大于2012，不大于今年的年份（如果今年还没到9月，那就按去年算），例：2024】</p></p>
             </explain>
         </div>
+        <script>
+            document.getElementById("js13kgames_button").addEventListener('click', function() {
+                window.open("https://js13kgames.com/" + document.getElementById("js13kgames").value + "/games");
+            });
+        </script>
     </body>
 </html>
