@@ -71,10 +71,10 @@ body:before {
 }
 
 .clock {
-    font-weight: bold;
-    font-size: 50px;
+    font-size: 36px;
     color: white;
     text-shadow: 10px 10px 15px #000000;
+    
 }
 
 .glass {
