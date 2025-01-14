@@ -38,8 +38,14 @@
     
     <aside class="right-text">
         <div class="clock">
-            <div id="clock">--:--:--</div>
+            <a href="https://time.is/Beijing" id="time_is_link" rel="nofollow">北京时间:</a>
+            <span id="Beijing_z43d"></span>
+            <script src="//widget.time.is/zh.js"></script>
+            <script>
+            time_is_widget.init({Beijing_z43d:{template:"TIME<br>DATE<br>SUN", date_format:"year年mnum月dnum日dayname", sun_format:"日出: srhour:srminute 日落: sshour:ssminute<br>昼长: dlhours时 dlminutes分", coords:"39.9075000,116.3972300"}});
+            </script>
         </div>
+        
         <div class="glass">
             <div id="ww_7c108cf4f2039" v='1.3' loc='auto' a='{"t":"horizontal","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"rgba(255,255,255,1)","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/zh/" id="ww_7c108cf4f2039_u" target="_blank">天气插件</a></div>
             <script async src="https://app2.weatherwidget.org/js/?id=ww_7c108cf4f2039"></script>
