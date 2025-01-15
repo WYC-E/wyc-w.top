@@ -9,8 +9,6 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 
-const musicId = '2624184715';
-document.getElementById('music').src = `//music.163.com/outchain/player?type=2&id=${musicId}&auto=1&height=66`;
 
 function loadMarkdown(url, elementId) {
     fetch(url)
