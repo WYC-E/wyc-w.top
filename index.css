@@ -12,9 +12,12 @@ body:before {
 
 /* 隐藏滚动条 */
 .body {
-    -ms-overflow-style: none;  /* IE 和 Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 和 Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
+
 .body::-webkit-scrollbar {
     display: none;
 }
@@ -74,7 +77,7 @@ body:before {
     font-size: 36px;
     color: white;
     text-shadow: 10px 10px 15px #000000;
-    
+
 }
 
 .glass {
@@ -108,7 +111,8 @@ body:before {
     box-sizing: border-box;
 }
 
-p, li {
+p,
+li {
     font-size: 14px;
     line-height: 1.4;
 }
@@ -119,9 +123,12 @@ img {
 }
 
 @keyframes moveUpDown {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-50px);
     }

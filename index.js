@@ -32,7 +32,7 @@ document.getElementById('inputmarkdown').addEventListener('click', () => {
     document.getElementById('markdown!').style.display = 'block';
 });
 
-window.onload = function() {
+window.onload = function () {
     const path = window.location.search.replace('?img?', '');
     document.body.style.backgroundImage = path ? `url(${path})` : 'url(index/footage/backgroundimg.jpg)';
 };
