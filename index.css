@@ -18,7 +18,7 @@ body {
     left: 50%;          /* 水平居中 */
     transform: translateX(-50%); /* 修正水平居中 */
     width: 90%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     backdrop-filter: blur(50px);
     transition: 0.5s ease-out;  /* 可选过渡动画 */
     padding: 10px;
