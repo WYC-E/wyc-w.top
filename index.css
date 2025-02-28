@@ -1,12 +1,27 @@
 body {
     background: url("背景.jpg") center/cover no-repeat fixed;
     color: white;
-    font: bold 20px "楷体";
+    font: bold 30px "楷体";
     min-height: 100vh;
     width: 100%;
     margin: 0;
+    position: relative;
 }
 
-/* .word {
-    backdrop-filter: blur(10000px);
+/* .main {
+    width: 90%;
+
 } */
+.mian {
+    position: absolute;  /* 绝对定位 */
+    top: 100vh;         /* 初始位于视口正下方 */
+    left: 50%;          /* 水平居中 */
+    transform: translateX(-50%); /* 修正水平居中 */
+    width: 90%;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    transition: 0.5s ease-out;  /* 可选过渡动画 */
+    padding: 10px;
+    box-shadow: 1px 1px 20px #00000032;
+    text-shadow: 2px 2px 20px #000000e0;
+}
