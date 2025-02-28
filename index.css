@@ -1,7 +1,7 @@
 body {
     background: url("背景.jpg");
     background-size: cover;
-    
+    position: fixed;
     color: white;
     font: bold 20px "楷体";
 }
