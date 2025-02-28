@@ -1,141 +1,19 @@
-body:before {
-    content: ' ';
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url("index/footage/backgroundimg1.png") center 0 no-repeat;
+body {
+    background: url("背景.jpg");
     background-size: cover;
-}
-
-/* 隐藏滚动条 */
-.body {
-    -ms-overflow-style: none;
-    /* IE 和 Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-.body::-webkit-scrollbar {
-    display: none;
-}
-
-.global_style {
-    margin-left: 10%;
-}
-
-.top_bar {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.top_bar a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    margin-right: 10px;
-}
-
-.top_bar a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: transparent;
-    transition: height 0.3s ease-in-out;
-}
-
-.top_bar a:hover::before {
-    height: 1px;
-    background-color: #999999;
-}
-
-.actually {
-    text-shadow: 5px 5px 10px #000000;
-    font-weight: bold;
-    margin: auto;
-}
-
-.right-text {
+    
     color: white;
-    position: absolute;
-    top: 14%;
-    right: 20%;
-    backdrop-filter: blur(20px);
-    text-align: center;
-    border-radius: 25px;
-    box-shadow: 1px 1px 20px #00000032;
+    font: bold 20px "楷体";
 }
 
-.clock {
-    font-size: 36px;
-    color: white;
-    text-shadow: 10px 10px 15px #000000;
+/* .word {
+    backdrop-filter: blur(10000px);
+} */
 
-}
-
-.glass {
-    text-shadow: 5px 5px 10px #000000;
-    font-weight: bold;
-}
-
-.actually:hover {
-    transition: 1s;
-    color: #000000;
-}
-
-.actually:not(:hover) {
-    transition: 2s;
-    color: rgba(0, 0, 0, 0);
-}
-
-.bottomtext {
-    position: absolute;
+/* .body {
+    backdrop-filter: blur(10px);
     width: 100%;
-    height: 200%;
-    backdrop-filter: blur(20px);
-    bottom: -200%;
-    left: 0%;
-    text-align: center;
-}
-
-#markdownContent {
-    padding: 10px;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-p,
-li {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-@keyframes moveUpDown {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-50px);
-    }
-}
-
-.abcd {
+    height: 100%;
     position: absolute;
-    top: -50px;
-    animation: moveUpDown 2s infinite;
-}
+    top: 0;
+} */
