@@ -1,28 +1,31 @@
-<!DOCTYPE html>  
-<html lang="ZH">  
-    <head>
-        <title id="title"></title>
-        <meta charset="UTF-8">
-        <style>
-            /* 全局样式 */
-            .global_style{
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        </style>
-    </head>  
-    <body>
-        <div class="global_style">
-            <h1 id="content" style="font-size: 100px;"></h1>  
-            <script>  
-                window.onload = function() {  
+<!DOCTYPE html>
+<html lang="ZH">
+
+<head>
+    <title id="title"></title>
+    <meta charset="UTF-8">
+    <style>
+        /* 全局样式 */
+        .global_style {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="global_style">
+        <h1 id="content" style="font-size: 100px;"></h1>
+        <script>
+            window.onload = function () {
                 var path = window.location.search.substring(1); // 获取?后面的路径部分  
                 var path1 = decodeURIComponent(path)
                 document.getElementById("title").innerText = path1; // 设置标题为?后面的内容  
                 document.getElementById("content").innerText = path1; // 将内容添加到<h1>标签中  
             };  
-            </script> 
-        </div>
-    </body>  
-</html> 
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8">
-        <title>401-服务器拒绝请求</title>
-        <link rel="stylesheet" href="public.css">
-    </head>
-    <body>
-        <img src="index/footage/1.png" style="left: 10px; top: 10px; position: absolute;">
-        <h1 style="font-size: 50px;">401</h1>
-        <p style="font-size: 25px; font-weight: bold;">请求要求身份验证</p>
-        <a href="https://wyc-w.top" style="color: black; text-decoration: none; font-weight: bold;">返回首页</a>
-        <p style="display: inline-block;" id="或">或</p>
-        <a href="" id="back" style="color: black; text-decoration: none; font-weight: bold;">返回刚才的页面</a>
-    </body>
-    <script>
-        window.onload = function() {  
-            var path = window.location.search.replace('?from?', '');
-            if (path === '') {
-                document.getElementById('back').style.display = 'none';
-                document.getElementById('或').style.display = 'none';
-            } else {
-                document.getElementById('back').href = path;
-            }
-        };
-    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>401-服务器拒绝请求</title>
+    <link rel="stylesheet" href="public.css">
+</head>
+
+<body>
+    <img src="index/footage/1.png" style="left: 10px; top: 10px; position: absolute;">
+    <h1 style="font-size: 50px;">401</h1>
+    <p style="font-size: 25px; font-weight: bold;">请求要求身份验证</p>
+    <a href="https://wyc-w.top" style="color: black; text-decoration: none; font-weight: bold;">返回首页</a>
+    <p style="display: inline-block;" id="或">或</p>
+    <a href="" id="back" style="color: black; text-decoration: none; font-weight: bold;">返回刚才的页面</a>
+</body>
+<script>
+    window.onload = function () {
+        var path = window.location.search.replace('?from?', '');
+        if (path === '') {
+            document.getElementById('back').style.display = 'none';
+            document.getElementById('或').style.display = 'none';
+        } else {
+            document.getElementById('back').href = path;
+        }
+    };
+</script>
+
 </html>

@@ -1,200 +1,205 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8">
-        <title>小游戏</title>
-        <link rel="shortcut icon" href=".../index/footage/1.png" type="image/x-icon">
-<style>
-    /* CSS样式表 - 全局样式定义 */
-    .global_style {
-        /* 设置全局元素居中对齐 */
-        text-align: center;
-        /* 自动分配左右外边距以使元素居中 */
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    /* CSS样式表 - 顶部栏样式定义 */
-    .top_bar {
-        /* 设置顶部栏背景颜色 */
-        background-color: #f5f5f5;
-        /* 设置顶部栏内部填充 */
-        padding: 10px;
-        /* 设置顶部栏为弹性布局 */
-        display: flex;
-        /* 设置子元素在主轴方向上均匀分布 */
-        justify-content: space-between;
-    }
+<head>
+    <meta charset="UTF-8">
+    <title>小游戏</title>
+    <link rel="shortcut icon" href=".../index/footage/1.png" type="image/x-icon">
+    <style>
+        /* CSS样式表 - 全局样式定义 */
+        .global_style {
+            /* 设置全局元素居中对齐 */
+            text-align: center;
+            /* 自动分配左右外边距以使元素居中 */
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    /* CSS样式表 - 顶部栏内的超链接样式定义 */
-    .top_bar a {
-        /* 设置超链接文本颜色 */
-        color: #000000;
-        /* 去除超链接下划线 */
-        text-decoration: none;
-        /* 设置超链接字体加粗 */
-        font-weight: bold;
-        /* 设置超链接相对定位 */
-        position: relative;
-        /* 设置相邻超链接间的右侧间距 */
-        margin-right: 10px;
-    }
+        /* CSS样式表 - 顶部栏样式定义 */
+        .top_bar {
+            /* 设置顶部栏背景颜色 */
+            background-color: #f5f5f5;
+            /* 设置顶部栏内部填充 */
+            padding: 10px;
+            /* 设置顶部栏为弹性布局 */
+            display: flex;
+            /* 设置子元素在主轴方向上均匀分布 */
+            justify-content: space-between;
+        }
 
-    /* CSS样式表 - 为顶部栏内超链接添加伪元素:before，在鼠标悬停时显示下划线效果 */
-    .top_bar a::before {
-        /* 伪元素内容为空字符串 */
-        content: '';
-        /* 设置伪元素绝对定位 */
-        position: absolute;
-        /* 设置伪元素距离底部为零 */
-        bottom: 0;
-        /* 设置伪元素距离左侧为零 */
-        left: 0;
-        /* 设置伪元素宽度为父元素宽度的100% */
-        width: 100%;
-        /* 初始高度为零 */
-        height: 0;
-        /* 设置透明背景色 */
-        background-color: transparent;
-        /* 设置高度变化过渡动画，时间为0.3秒，采用ease-in-out缓动方式 */
-        transition: height 0.3s ease-in-out;
-    }
+        /* CSS样式表 - 顶部栏内的超链接样式定义 */
+        .top_bar a {
+            /* 设置超链接文本颜色 */
+            color: #000000;
+            /* 去除超链接下划线 */
+            text-decoration: none;
+            /* 设置超链接字体加粗 */
+            font-weight: bold;
+            /* 设置超链接相对定位 */
+            position: relative;
+            /* 设置相邻超链接间的右侧间距 */
+            margin-right: 10px;
+        }
 
-    /* CSS样式表 - 当鼠标悬停在顶部栏内超链接上时，伪元素:before的高度变为1px，并显示深灰色背景 */
-    .top_bar a:hover::before {
-        height: 1px;
-        background-color: #828282;
-    }
+        /* CSS样式表 - 为顶部栏内超链接添加伪元素:before，在鼠标悬停时显示下划线效果 */
+        .top_bar a::before {
+            /* 伪元素内容为空字符串 */
+            content: '';
+            /* 设置伪元素绝对定位 */
+            position: absolute;
+            /* 设置伪元素距离底部为零 */
+            bottom: 0;
+            /* 设置伪元素距离左侧为零 */
+            left: 0;
+            /* 设置伪元素宽度为父元素宽度的100% */
+            width: 100%;
+            /* 初始高度为零 */
+            height: 0;
+            /* 设置透明背景色 */
+            background-color: transparent;
+            /* 设置高度变化过渡动画，时间为0.3秒，采用ease-in-out缓动方式 */
+            transition: height 0.3s ease-in-out;
+        }
 
-    .link {
-        /* 设置超链接内部填充 */
-        padding: 10px;
-        /* 设置超链接为弹性布局 */
-        display: flex;
-        /* 设置子元素在主轴方向上均匀分布 */
-        justify-content: space-between;
-    }
+        /* CSS样式表 - 当鼠标悬停在顶部栏内超链接上时，伪元素:before的高度变为1px，并显示深灰色背景 */
+        .top_bar a:hover::before {
+            height: 1px;
+            background-color: #828282;
+        }
 
-    /* CSS样式表 - 超链接内的a标签样式定义 */
-    .link a {
-        /* 继承并保持相同的颜色、装饰和字体加粗样式 */
-        color: #000000;
-        /* text-decoration: none; */
-        font-weight: bold;
-        /* 设置超链接为相对定位 */
-        position: relative;
-        /* 同样设置相邻超链接间的右侧间距 */
-        margin-right: 10px;
-        outline: dashed #00000027;
-        font-size: larger;
-        text-decoration: none;
-    }
-    
-    .link a:hover {
-        transition-duration: 0.3s;
-        background-color: #00000027;
-    }
-    
-    .link button {
-        color: #000000;
-        font-weight: bold;
-        position: relative;
-        margin-right: 10px;
-        outline: dashed #00000027;
-        font-size: larger;
-        text-decoration: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 28px;
-    }
+        .link {
+            /* 设置超链接内部填充 */
+            padding: 10px;
+            /* 设置超链接为弹性布局 */
+            display: flex;
+            /* 设置子元素在主轴方向上均匀分布 */
+            justify-content: space-between;
+        }
 
-    .link button:hover {
-        transition-duration: 0.3s;
-        background-color: #00000027;
-    }
+        /* CSS样式表 - 超链接内的a标签样式定义 */
+        .link a {
+            /* 继承并保持相同的颜色、装饰和字体加粗样式 */
+            color: #000000;
+            /* text-decoration: none; */
+            font-weight: bold;
+            /* 设置超链接为相对定位 */
+            position: relative;
+            /* 同样设置相邻超链接间的右侧间距 */
+            margin-right: 10px;
+            outline: dashed #00000027;
+            font-size: larger;
+            text-decoration: none;
+        }
 
-    .p-{
-        font-size: 15px;
-        position: fixed;
-        bottom: 0; 
-        width: 100%; 
-        background-color: #ffffff; 
-        padding: 10px;
-    }
-</style>
-    </head>
-    <body bgcolor="#f5f5f5">
-        <header class="top_bar">
-            <nav>
-                <a href="https://eason861en.github.io" target="_blank">首页</a>
-                <a href="https://github.com/Eason861EN/Eason861EN.github.io" target="_blank">网页开源</a>
-                <a href="../历史版本/index.html" target="_blank">历史版本</a>
-                <a href="../bqb.html" target="_blank">表情包</a>
-                <a href="https://www.baidu.com" target="_blank">百度</a>
-            </nav> 
-            <img src="../footage/1.png" alt="这是一个搜索不到的logo" width="70px">
-            <nav>
-                <a href="../我的app/王一澄的app.apk" target="_blank">我的软件</a>
-                <a href="https://www.bitbug.net/" target="_blank">比特虫——ico图标转换工具</a>
-            </nav>
-        </header>
-        <section class="global_style">
-            <h1 style="font-size: 50px;">小游戏</h1>
-        </section>
-        <div>
-            <Ul class="link">
-                <a href="https://web.wetab.link/games/2048/index.html">2048军旗版</a>
-                <a href="https://web.wetab.link/games/cube/index.html">3D魔方</a>
-                <a href="https://web.wetab.link/games/ori/index.html">地狱闯关</a>
-                <a href="https://web.wetab.link/games/aircraft/index.html">小飞机</a>
-                <a href="https://web.wetab.link/games/dino/index.html">恐龙快跑</a>
-                <a href="https://web.wetab.link/games/minesweeper/index.html">扫雷</a>
-                <a href="https://web.wetab.link/games/cut/index.html">积木切切乐</a>
-                <a href="https://web.wetab.link/games/surf/index.html">网上冲浪</a>
-                <a href="./WebMinecraft.html">我的世界网页版</a>
-            </Ul>
-            <Ul class="link">
-                <a href="https://widget.codelife.cc/games/flattenFlappybird/">压扁Flappy Bird</a>
-                <a href="http://poki.com/zh/">Poki</a>
-                <a href="https://bruno-simon.com/">3D小车</a>
-                <a href="https://tetris.com/play-tetris">俄罗斯方块</a>
-                <a href="https://nazo.one-story.cn/">Nazo_Game</a>
-                <a href="https://lines.frvr.com/">连连看</a>
-                <a href="http://www.staggeringbeauty.com/">越摇越快乐¹</a>
-                <a href="http://www.secaibi.com/howbigisspace/">天空有多高²</a>
-            </Ul>
-            <Ul class="link">
-                <a href="https://iss-sim.spacex.com/">SpaceX对接空间站</a>
-                <a href="https://2020game.io/">令人发疯的2022</a>
-                <a href="https://widget.codelife.cc/games/tangguo/">圣诞老人过悬崖</a>
-                <a href="https://fireworks.nianbroken.top/">烟花模拟器</a>
-                <a href="http://weavesilk.com/">Silk – Interactive Generative Art</a>
-                <a href="https://slowroads.io/">无尽驾驶</a>
-            </Ul>
-            <Ul class="link" >
-                <a href="https://www.geo-fs.com/geofs.php">飞行模拟器</a>
-                <a href="https://florr.io/">florr</a>
-                <a href="https://www.yikm.net/">小霸王</a>
-                <button class="link" type="button" id="js13kgames_button"><input type="number" id="js13kgames" onclick="event.stopPropagation();">年的js13kgames³</button>
-            </Ul>
-        </div>
-        <div style="height: 107px;"></div>
-        <div class="p-">
-            <explain class="p-">
-                <p>¹：【包含闪烁的图像】</p>
-                <p>²：【滑动鼠标滚轮】</p>
-                <p>³：【输入大于2012，不大于今年的年份（如果今年还没到9月，那就按去年算），例：2024】</p></p>
-            </explain>
-        </div>
-        <script>
-            document.getElementById("js13kgames_button").addEventListener('click', function() {
-                window.open("https://js13kgames.com/" + document.getElementById("js13kgames").value + "/games");
-            });
-        </script>
-    </body>
+        .link a:hover {
+            transition-duration: 0.3s;
+            background-color: #00000027;
+        }
+
+        .link button {
+            color: #000000;
+            font-weight: bold;
+            position: relative;
+            margin-right: 10px;
+            outline: dashed #00000027;
+            font-size: larger;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 28px;
+        }
+
+        .link button:hover {
+            transition-duration: 0.3s;
+            background-color: #00000027;
+        }
+
+        .p- {
+            font-size: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#f5f5f5">
+    <header class="top_bar">
+        <nav>
+            <a href="https://eason861en.github.io" target="_blank">首页</a>
+            <a href="https://github.com/Eason861EN/Eason861EN.github.io" target="_blank">网页开源</a>
+            <a href="../历史版本/index.html" target="_blank">历史版本</a>
+            <a href="../bqb.html" target="_blank">表情包</a>
+            <a href="https://www.baidu.com" target="_blank">百度</a>
+        </nav>
+        <img src="../footage/1.png" alt="这是一个搜索不到的logo" width="70px">
+        <nav>
+            <a href="../我的app/王一澄的app.apk" target="_blank">我的软件</a>
+            <a href="https://www.bitbug.net/" target="_blank">比特虫——ico图标转换工具</a>
+        </nav>
+    </header>
+    <section class="global_style">
+        <h1 style="font-size: 50px;">小游戏</h1>
+    </section>
+    <div>
+        <Ul class="link">
+            <a href="https://web.wetab.link/games/2048/index.html">2048军旗版</a>
+            <a href="https://web.wetab.link/games/cube/index.html">3D魔方</a>
+            <a href="https://web.wetab.link/games/ori/index.html">地狱闯关</a>
+            <a href="https://web.wetab.link/games/aircraft/index.html">小飞机</a>
+            <a href="https://web.wetab.link/games/dino/index.html">恐龙快跑</a>
+            <a href="https://web.wetab.link/games/minesweeper/index.html">扫雷</a>
+            <a href="https://web.wetab.link/games/cut/index.html">积木切切乐</a>
+            <a href="https://web.wetab.link/games/surf/index.html">网上冲浪</a>
+            <a href="./WebMinecraft.html">我的世界网页版</a>
+        </Ul>
+        <Ul class="link">
+            <a href="https://widget.codelife.cc/games/flattenFlappybird/">压扁Flappy Bird</a>
+            <a href="http://poki.com/zh/">Poki</a>
+            <a href="https://bruno-simon.com/">3D小车</a>
+            <a href="https://tetris.com/play-tetris">俄罗斯方块</a>
+            <a href="https://nazo.one-story.cn/">Nazo_Game</a>
+            <a href="https://lines.frvr.com/">连连看</a>
+            <a href="http://www.staggeringbeauty.com/">越摇越快乐¹</a>
+            <a href="http://www.secaibi.com/howbigisspace/">天空有多高²</a>
+        </Ul>
+        <Ul class="link">
+            <a href="https://iss-sim.spacex.com/">SpaceX对接空间站</a>
+            <a href="https://2020game.io/">令人发疯的2022</a>
+            <a href="https://widget.codelife.cc/games/tangguo/">圣诞老人过悬崖</a>
+            <a href="https://fireworks.nianbroken.top/">烟花模拟器</a>
+            <a href="http://weavesilk.com/">Silk – Interactive Generative Art</a>
+            <a href="https://slowroads.io/">无尽驾驶</a>
+        </Ul>
+        <Ul class="link">
+            <a href="https://www.geo-fs.com/geofs.php">飞行模拟器</a>
+            <a href="https://florr.io/">florr</a>
+            <a href="https://www.yikm.net/">小霸王</a>
+            <button class="link" type="button" id="js13kgames_button"><input type="number" id="js13kgames"
+                    onclick="event.stopPropagation();">年的js13kgames³</button>
+        </Ul>
+    </div>
+    <div style="height: 107px;"></div>
+    <div class="p-">
+        <explain class="p-">
+            <p>¹：【包含闪烁的图像】</p>
+            <p>²：【滑动鼠标滚轮】</p>
+            <p>³：【输入大于2012，不大于今年的年份（如果今年还没到9月，那就按去年算），例：2024】</p>
+            </p>
+        </explain>
+    </div>
+    <script>
+        document.getElementById("js13kgames_button").addEventListener('click', function () {
+            window.open("https://js13kgames.com/" + document.getElementById("js13kgames").value + "/games");
+        });
+    </script>
+</body>
+
 </html>
